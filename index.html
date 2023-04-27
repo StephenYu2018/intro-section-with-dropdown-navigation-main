@@ -10,21 +10,91 @@
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 </head>
 <body>
-  
-  Features
-  Company
-  Careers
-  About
-
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-   
+  <header>
+    <a href="#"><img src="./images/logo.svg" alt="Snap logo"></a>
+    <button type="button" aria-label="Open menu"
+            class="lg:hidden">
+      <img src="./images/menu.svg" alt="Hamburger menu icon">
+    </button>
+    <nav class="fixed top-0 right-[-15rem] lg:static lg:top-auto lg:right-auto">
+      <div role="menubar" class="lg:hidden">
+        <button type="button" aria-label="Close menu">
+          <img src="./images/close-menu.svg" alt="'X' icon">
+        </button>
+      </div>
+      <ul aria-description="Informational links">
+        <li>
+          <button type="button">
+            Features
+	    <img src="./images/icon-arrow-down.svg" alt="Down arrow icon">
+          </button>
+          <ul class="hidden fixed">
+            <li>
+              <img src="./images/icon-todo.svg" alt="To-do list icon">
+              <a href="#">Todo List</a>
+            </li>
+            <li>
+              <img src="./images/icon-calender.svg" alt="Calender icon">
+              <a href="#">Calender</a>
+            </li>
+            <li>
+              <img src="./images/icon-reminders.svg" alt="Notification bell icon">
+              <a href="#">Reminders</a>
+            </li>
+            <li>
+              <img src="./images/icon-planning.svg" alt="Clock icon">
+	      <a href="#">Planning</a>
+            </li>
+          </ul>
+        </li>
+	<li>
+          <button type="button">
+            Company
+            <img src="./images/icon-arrow-down.svg" alt="Down arrow icon">
+          </button>
+          <ul class="hidden fixed">
+            <li><a href="#">History</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <a href="#">Login</a>
+      <a href="#">Register</a>
+    </nav>
+    <div aria-hidden="true" class="hidden fixed w-screen h-screen"></div>
+  </header>
+  <main>
+    <header>
+      <picture>
+        <source srcset="./images/image-hero-desktop.png"
+                media="(min-width: 1024px)">
+        <img src="./images/image-hero-mobile.png"
+             alt="Person doing remote work on laptop">
+      </picture>
+      <h1>Make remote work</h1>
+      <p>
+        Get your team in sync, no matter your location. Streamline processes, 
+        create team rituals, and watch productivity soar.
+      </p>
+      <p><a href="#">Learn more</a></p>
+      <ul aria-description="Some of our top clients">
+        <li aria-description="databiz">
+          <img src="./images/client-databiz.svg" alt="Databiz logo">
+        </li>
+        <li aria-description="audiophile">
+          <img src="./images/client-audiophile.svg" alt="Audiophile logo">
+        </li>
+        <li aria-description="meet">
+          <img src="./images/client-meet.svg" alt="Meet logo">
+        </li>
+        <li aria-description="maker">
+          <img src="./images/client-maker.svg" alt="Maker logo">
+        </li>
+      </ul>
+    </header>
+  </main>
 </body>
 </html>

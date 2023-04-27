@@ -522,3 +522,45 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.fixed {
+  position: fixed;
+}
+
+.right-\[-15rem\] {
+  right: -15rem;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+@media (min-width: 1024px) {
+  .lg\:static {
+    position: static;
+  }
+
+  .lg\:right-auto {
+    right: auto;
+  }
+
+  .lg\:top-auto {
+    top: auto;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+}
+
