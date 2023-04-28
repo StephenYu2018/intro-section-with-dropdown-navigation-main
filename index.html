@@ -12,15 +12,19 @@
 <body>
   <div aria-hidden="true" id="screen-overlay"
        class="hidden fixed w-screen h-screen"></div>
-  <header>
-    <a href="#"><img src="./images/logo.svg" alt="Snap logo"></a>
-    <button type="button" class="lg:hidden">
+  <header class="flex justify-between">
+    <a href="#" class="px-[1.0625rem] py-6">
+      <img class="inline" src="./images/logo.svg" role="img" alt="Snap logo"
+           width="84" height="27" />
+    </a>
+    <button type="button" class="lg:hidden px-[0.9375rem] py-6">
       <img src="./images/icon-menu.svg" alt="Open navigation menu">
     </button>
     <nav class="fixed top-0 right-[-15rem] lg:static lg:top-auto lg:right-auto">
       <div class="lg:hidden">
         <button type="button">
-          <img src="./images/icon-close-menu.svg" alt="Close navigation menu">
+          <img src="./images/icon-close-menu.svg" role="img"
+               alt="Close navigation menu" width="32" height="18" />
         </button>
       </div>
       <ul aria-description="Informational links">
@@ -72,7 +76,9 @@
         <source srcset="./images/image-hero-desktop.png"
                 media="(min-width: 1024px)">
         <img src="./images/image-hero-mobile.png"
-             alt="Person doing remote work on laptop">
+             alt="Person doing remote work on laptop"
+             width="750" height="564"
+	     class="w-full h-auto">
       </picture>
       <h1>Make remote work</h1>
       <p>
@@ -82,16 +88,20 @@
       <p><a href="#">Learn more</a></p>
       <ul aria-description="Some of our top clients">
         <li aria-description="databiz">
-          <img src="./images/client-databiz.svg" alt="Databiz logo">
+          <img src="./images/client-databiz.svg" role="img" alt="Databiz logo"
+               width="114" height="20" />
         </li>
         <li aria-description="audiophile">
-          <img src="./images/client-audiophile.svg" alt="Audiophile logo">
+          <img src="./images/client-audiophile.svg" role="img"
+               alt="Audiophile logo" width="73" height="36" />
         </li>
         <li aria-description="meet">
-          <img src="./images/client-meet.svg" alt="Meet logo">
+          <img src="./images/client-meet.svg" role="img" alt="Meet logo"
+               width="90" height="20" />
         </li>
         <li aria-description="maker">
-          <img src="./images/client-maker.svg" alt="Maker logo">
+          <img src="./images/client-maker.svg" role="img" alt="Maker logo"
+               width="83" height="24" />
         </li>
       </ul>
     </header>

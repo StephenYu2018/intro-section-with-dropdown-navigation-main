@@ -534,6 +534,14 @@ video {
   top: 0px;
 }
 
+.inline {
+  display: inline;
+}
+
+.flex {
+  display: flex;
+}
+
 .hidden {
   display: none;
 }
@@ -542,8 +550,35 @@ video {
   height: 100vh;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .w-screen {
   width: 100vw;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.px-\[1\.0625rem\] {
+  padding-left: 1.0625rem;
+  padding-right: 1.0625rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.px-\[0\.9375rem\] {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
 }
 
 @media (min-width: 1024px) {
