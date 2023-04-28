@@ -71,7 +71,7 @@
     </nav>
   </header>
   <main>
-    <header>
+    <header class="flex flex-col lg:flex-row-reverse">
       <picture>
         <source srcset="./images/image-hero-desktop.png"
                 media="(min-width: 1024px)">
@@ -80,30 +80,33 @@
              width="750" height="564"
 	     class="w-full h-auto">
       </picture>
-      <h1>Make remote work</h1>
-      <p>
-        Get your team in sync, no matter your location. Streamline processes, 
-        create team rituals, and watch productivity soar.
-      </p>
-      <p><a href="#">Learn more</a></p>
-      <ul aria-description="Some of our top clients">
-        <li aria-description="databiz">
-          <img src="./images/client-databiz.svg" role="img" alt="Databiz logo"
-               width="114" height="20" />
-        </li>
-        <li aria-description="audiophile">
-          <img src="./images/client-audiophile.svg" role="img"
-               alt="Audiophile logo" width="73" height="36" />
-        </li>
-        <li aria-description="meet">
-          <img src="./images/client-meet.svg" role="img" alt="Meet logo"
-               width="90" height="20" />
-        </li>
-        <li aria-description="maker">
-          <img src="./images/client-maker.svg" role="img" alt="Maker logo"
-               width="83" height="24" />
-        </li>
-      </ul>
+      <div class="flex flex-col items-center lg:items-start py-[3.125rem]">
+        <h1 class="text-center">Make remote work</h1>
+        <p class="text-center mt-[1.1875rem]">
+          Get your team in sync, no matter your location. Streamline processes, 
+          create team rituals, and watch productivity soar.
+        </p>
+        <a href="#" class="block text-center mt-6">Learn more</a>
+        <ul aria-description="Some of our top clients" class="flex mt-[1.9375rem]">
+          <li aria-description="databiz" class="w-[7.0625rem] px-4">
+            <img src="./images/client-databiz.svg" role="img" alt="Databiz logo"
+                 width="114" height="20" class="w-full h-auto" />
+          </li>
+          <li aria-description="audiophile" class="w-[4.92rem] px-[0.8125rem]">
+            <img src="./images/client-audiophile.svg" role="img"
+                 alt="Audiophile logo" width="73" height="36"
+                 class="w-full h-auto" />
+          </li>
+          <li aria-description="meet" class="w-[6.035rem] px-[1.0175rem]">
+            <img src="./images/client-meet.svg" role="img" alt="Meet logo"
+                 width="90" height="20" class="w-full h-auto"/>
+          </li>
+          <li aria-description="maker" class="w-[5.215rem] px-[0.7325rem]">
+            <img src="./images/client-maker.svg" role="img" alt="Maker logo"
+                 width="83" height="24" class="w-full h-auto"/>
+          </li>
+        </ul>
+      </div>
     </header>
   </main>
 </body>
