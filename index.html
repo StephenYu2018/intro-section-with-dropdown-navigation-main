@@ -10,13 +10,15 @@
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 </head>
 <body>
+  <div aria-hidden="true" id="screen-overlay"
+       class="hidden fixed w-screen h-screen"></div>
   <header>
     <a href="#"><img src="./images/logo.svg" alt="Snap logo"></a>
     <button type="button" class="lg:hidden">
       <img src="./images/icon-menu.svg" alt="Open navigation menu">
     </button>
     <nav class="fixed top-0 right-[-15rem] lg:static lg:top-auto lg:right-auto">
-      <div role="menubar" class="lg:hidden">
+      <div class="lg:hidden">
         <button type="button">
           <img src="./images/icon-close-menu.svg" alt="Close navigation menu">
         </button>
@@ -63,7 +65,6 @@
       <a href="#">Login</a>
       <a href="#">Register</a>
     </nav>
-    <div aria-hidden="true" class="hidden fixed w-screen h-screen"></div>
   </header>
   <main>
     <header>
