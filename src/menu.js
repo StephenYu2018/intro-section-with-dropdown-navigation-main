@@ -8,6 +8,21 @@ const offscreenNavbar = 'right-[-15rem]';
 const onscreenNavbar = 'right-0';
 const noDisplay = 'hidden';
 
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 1024) {
+    hideNavbar();
+  }
+});
+
+function hideNavbar() {
+  if (navMenu.classList.contains(onscreenNavbar)) {
+    navMenu.classList.remove(onscreenNavbar);
+    navMenu.classList.add(offscreenNavbar);
+
+    screenOverlay.classList.add(noDisplay);
+  }
+}
+
 openNavMenuButton.addEventListener('click', () => {
   navMenu.classList.remove(offscreenNavbar);
   navMenu.classList.add(onscreenNavbar);
@@ -15,11 +30,6 @@ openNavMenuButton.addEventListener('click', () => {
   screenOverlay.classList.remove(noDisplay);
 });
 
-closeNavMenuButton.addEventListener('click', () => {
-  navMenu.classList.remove(onscreenNavbar);
-  navMenu.classList.add(offscreenNavbar);
-
-  screenOverlay.classList.add(noDisplay);
-});
+closeNavMenuButton.addEventListener('click', hideNavbar);
 
 
