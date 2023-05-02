@@ -26,7 +26,8 @@
            width="32" height="18" />
     </button>
     <nav class="fixed top-0 right-[-15rem] h-screen w-[15rem] lg:static
-                lg:top-auto lg:right-auto lg:h-auto lg:w-auto bg-almost-white"
+                lg:top-auto lg:right-auto lg:h-auto lg:w-auto bg-almost-white
+                font-epilogue text-medium-gray"
          id="nav-menu">
       <header class="lg:hidden h-[4.6875rem] flex justify-end">
         <button type="button" id="close-nav-menu"
@@ -36,48 +37,62 @@
                alt="Close navigation menu" width="26" height="26" />
         </button>
       </header>
-      <ul aria-description="Informational links">
-        <li>
-          <button type="button" id="toggle-features-menu">
-            Features
-	    <img src="./images/icon-arrow-down.svg" alt="Down arrow icon">
-          </button>
-          <ul class="hidden fixed" id="features-menu">
-            <li>
-              <img src="./images/icon-todo.svg" alt="To-do list icon">
-              <a href="#">Todo List</a>
-            </li>
-            <li>
-              <img src="./images/icon-calender.svg" alt="Calender icon">
-              <a href="#">Calender</a>
-            </li>
-            <li>
-              <img src="./images/icon-reminders.svg" alt="Notification bell icon">
-              <a href="#">Reminders</a>
-            </li>
-            <li>
-              <img src="./images/icon-planning.svg" alt="Clock icon">
-	      <a href="#">Planning</a>
-            </li>
-          </ul>
-        </li>
-	<li>
-          <button type="button" id="toggle-company-menu">
-            Company
-            <img src="./images/icon-arrow-down.svg" alt="Down arrow icon">
-          </button>
-          <ul class="hidden fixed" id="company-menu">
-            <li><a href="#">History</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-      <a href="#">Login</a>
-      <a href="#">Register</a>
-    </nav>
+      <div class="pl-6 pr-5">
+        <ul aria-description="Informational links"
+            class="lg:space-y-0 text-base/none">
+          <li class="mb-[1.625rem]">
+            <button type="button" id="toggle-features-menu">
+              Features
+              <img src="./images/icon-arrow-down.svg" role="img" alt="Down arrow icon"
+                   width="10" height="6" class="inline ml-[0.9375rem]" />
+            </button>
+            <ul class="hidden fixed" id="features-menu">
+              <li>
+                <img src="./images/icon-todo.svg" alt="To-do list icon">
+                <a href="#">Todo List</a>
+              </li>
+              <li>
+                <img src="./images/icon-calender.svg" alt="Calender icon">
+                <a href="#">Calender</a>
+              </li>
+              <li>
+                <img src="./images/icon-reminders.svg" alt="Notification bell icon">
+                <a href="#">Reminders</a>
+              </li>
+              <li>
+                <img src="./images/icon-planning.svg" alt="Clock icon">
+                <a href="#">Planning</a>
+              </li>
+            </ul>
+          </li>
+          <li class="mb-[1.625rem]">
+            <button type="button" id="toggle-company-menu">
+              Company
+              <img src="./images/icon-arrow-down.svg" alt="Down arrow icon"
+                   width="10" height="6" class="inline ml-[0.9375rem]" />
+            </button>
+            <ul class="hidden fixed" id="company-menu">
+              <li><a href="#">History</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li class="mb-[1.625rem]"><a href="#">Careers</a></li>
+          <li class="mb-[1.625rem]"><a href="#">About</a></li>
+        </ul>
+        <a href="#"
+           class="block h-[2.625rem] text-center flex flex-col justify-center
+                  text-sm/none mt-[0.0625rem]">
+           Login
+        </a>
+        <a href="#"
+           class="block h-[2.625rem] text-center flex flex-col justify-center
+                  border border-almost-black/[0.9] rounded-[0.875rem]
+                  text-sm/none">
+           Register
+        </a>
+      </nav>
+    </div>
   </header>
   <main>
     <header class="flex flex-col lg:flex-row-reverse bg-almost-white">
