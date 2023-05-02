@@ -526,6 +526,10 @@ video {
   position: fixed;
 }
 
+.right-0 {
+  right: 0px;
+}
+
 .right-\[-15rem\] {
   right: -15rem;
 }
@@ -558,32 +562,20 @@ video {
   display: flex;
 }
 
-.grid {
-  display: grid;
-}
-
 .hidden {
   display: none;
-}
-
-.h-screen {
-  height: 100vh;
-}
-
-.h-auto {
-  height: auto;
 }
 
 .h-\[3\.75rem\] {
   height: 3.75rem;
 }
 
-.w-screen {
-  width: 100vw;
+.h-auto {
+  height: auto;
 }
 
-.w-full {
-  width: 100%;
+.h-screen {
+  height: 100vh;
 }
 
 .w-\[4\.92rem\] {
@@ -606,12 +598,16 @@ video {
   width: 95.2%;
 }
 
-.grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+.w-full {
+  width: 100%;
 }
 
-.grid-rows-\[repeat\(5\2c _auto\)\] {
-  grid-template-rows: repeat(5, auto);
+.w-screen {
+  width: 100vw;
+}
+
+.w-\[15rem\] {
+  width: 15rem;
 }
 
 .flex-col {
@@ -624,10 +620,6 @@ video {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.justify-items-center {
-  justify-items: center;
 }
 
 .rounded-2xl {
@@ -644,19 +636,8 @@ video {
   background-color: hsl(0 0% 98% / var(--tw-bg-opacity));
 }
 
-.px-\[1\.0625rem\] {
-  padding-left: 1.0625rem;
-  padding-right: 1.0625rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-.px-\[0\.9375rem\] {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+.bg-almost-black\/75 {
+  background-color: hsl(0 0% 8% / 0.75);
 }
 
 .px-4 {
@@ -674,14 +655,19 @@ video {
   padding-right: 0.8125rem;
 }
 
+.px-\[0\.9375rem\] {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+
 .px-\[1\.0175rem\] {
   padding-left: 1.0175rem;
   padding-right: 1.0175rem;
 }
 
-.py-\[3\.125rem\] {
-  padding-top: 3.125rem;
-  padding-bottom: 3.125rem;
+.px-\[1\.0625rem\] {
+  padding-left: 1.0625rem;
+  padding-right: 1.0625rem;
 }
 
 .px-\[1\.3125rem\] {
@@ -689,9 +675,19 @@ video {
   padding-right: 1.3125rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .py-\[0\.6875rem\] {
   padding-top: 0.6875rem;
   padding-bottom: 0.6875rem;
+}
+
+.py-\[3\.125rem\] {
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
 }
 
 .text-center {
@@ -726,10 +722,6 @@ video {
   letter-spacing: -0.02em;
 }
 
-.tracking-wider {
-  letter-spacing: 0.05em;
-}
-
 .text-almost-black {
   --tw-text-opacity: 1;
   color: hsl(0 0% 8% / var(--tw-text-opacity));
@@ -760,6 +752,14 @@ video {
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:h-auto {
+    height: auto;
+  }
+
+  .lg\:w-auto {
+    width: auto;
   }
 
   .lg\:flex-row-reverse {

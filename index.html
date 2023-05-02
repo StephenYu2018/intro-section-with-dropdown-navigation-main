@@ -15,30 +15,31 @@
 </head>
 <body>
   <div aria-hidden="true" id="screen-overlay"
-       class="hidden fixed w-screen h-screen"></div>
+       class="hidden fixed w-screen h-screen bg-almost-black/75"></div>
   <header class="flex justify-between bg-almost-white">
     <a href="#" class="px-[1.0625rem] py-6">
       <img class="inline" src="./images/logo.svg" role="img" alt="Snap logo"
            width="84" height="27" />
     </a>
-    <button type="button" class="lg:hidden px-[0.9375rem] py-6">
+    <button type="button" class="lg:hidden px-[0.9375rem] py-6" id="open-nav-menu">
       <img src="./images/icon-menu.svg" alt="Open navigation menu">
     </button>
-    <nav class="fixed top-0 right-[-15rem] lg:static lg:top-auto lg:right-auto
-                bg-almost-white">
+    <nav class="fixed top-0 right-[-15rem] h-screen w-[15rem] lg:static
+                lg:top-auto lg:right-auto lg:h-auto lg:w-auto bg-almost-white"
+         id="nav-menu">
       <div class="lg:hidden">
-        <button type="button">
+        <button type="button" id="close-nav-menu">
           <img src="./images/icon-close-menu.svg" role="img"
                alt="Close navigation menu" width="32" height="18" />
         </button>
       </div>
       <ul aria-description="Informational links">
         <li>
-          <button type="button">
+          <button type="button" id="toggle-features-menu">
             Features
 	    <img src="./images/icon-arrow-down.svg" alt="Down arrow icon">
           </button>
-          <ul class="hidden fixed">
+          <ul class="hidden fixed" id="features-menu">
             <li>
               <img src="./images/icon-todo.svg" alt="To-do list icon">
               <a href="#">Todo List</a>
@@ -58,11 +59,11 @@
           </ul>
         </li>
 	<li>
-          <button type="button">
+          <button type="button" id="toggle-company-menu">
             Company
             <img src="./images/icon-arrow-down.svg" alt="Down arrow icon">
           </button>
-          <ul class="hidden fixed">
+          <ul class="hidden fixed" id="company-menu">
             <li><a href="#">History</a></li>
             <li><a href="#">Our Team</a></li>
             <li><a href="#">Blog</a></li>
@@ -124,5 +125,6 @@
       </div>
     </header>
   </main>
+  <script src="./src/menu.js" defer></script>
 </body>
 </html>
