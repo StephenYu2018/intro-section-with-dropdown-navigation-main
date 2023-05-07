@@ -41,14 +41,18 @@
         <ul aria-description="Informational links"
             class="text-base/none lg:text-sm/none flex flex-col lg:flex-row
                    lg:items-center lg:h-full lg:space-x-[2.4375rem]">
-          <li class="mb-[1.625rem] lg:mb-0">
+          <li class="mb-[1.625rem] lg:mb-0 lg:group lg:relative">
             <button type="button" id="toggle-features-menu">
               Features
               <img src="./images/icon-arrow-down.svg" role="img"
                    alt="Down arrow icon" width="10" height="6"
                    class="inline ml-[0.9375rem] lg:ml-[0.4375rem]" />
             </button>
-            <ul class="hidden pl-6 pt-[1.625rem] space-y-[1.375rem]" id="features-menu">
+            <ul class="hidden lg:absolute pl-6 pt-[1.625rem] lg:px-[1.5rem]
+                       lg:pt-[1.4375rem] lg:pb-[1.5rem] lg:rounded-[10px]
+                       lg:shadow-[0_0_50px_hsla(0,0%,8%,0.25)]
+                       space-y-[1.375rem] lg:space-y-4 lg:top-9 lg:right-px"
+                id="features-menu">
               <li class="flex items-center space-x-[0.9375rem]">
                 <span class="w-4 inline-flex justify-center">
                   <img src="./images/icon-todo.svg" role="img" alt="To-do list icon"
@@ -81,15 +85,21 @@
               </li>
             </ul>
           </li>
-          <li class="mb-[1.625rem] lg:mb-0">
+          <li class="mb-[1.625rem] lg:mb-0 relative">
             <button type="button" id="toggle-company-menu">
               Company
               <img src="./images/icon-arrow-down.svg" alt="Down arrow icon"
                    width="10" height="6" class="inline ml-[0.9375rem] lg:ml-[0.4375rem]" />
             </button>
-            <ul class="hidden pl-6 pt-[1.625rem] space-y-[1.375rem]" id="company-menu">
+            <ul class="hidden lg:absolute pl-6 pt-[1.625rem] lg:px-[1.5625rem]
+                       lg:py-6 lg:rounded-[10px] lg:top-9 lg:left-0
+                       lg:shadow-[0_0_50px_hsla(0,0%,8%,0.25)]
+                       space-y-[1.375rem] lg:space-y-4"
+                id="company-menu">
               <li class="text-[0.9375rem]"><a href="#">History</a></li>
-              <li class="text-[0.9375rem]"><a href="#">Our Team</a></li>
+              <li class="text-[0.9375rem] whitespace-nowrap">
+                <a href="#">Our Team</a>
+              </li>
               <li class="text-[0.9375rem]"><a href="#">Blog</a></li>
             </ul>
           </li>
