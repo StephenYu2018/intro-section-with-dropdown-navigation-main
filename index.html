@@ -16,20 +16,23 @@
 <body>
   <div aria-hidden="true" id="screen-overlay"
        class="hidden fixed w-screen h-screen bg-almost-black/75"></div>
-  <header class="flex justify-between lg:pb-[0.1rem] bg-almost-white">
-    <a href="#" class="px-[1.0625rem] lg:px-10 py-6 lg:py-8">
+  <header class="flex justify-between md:pb-[0.1rem] bg-almost-white">
+    <a href="#"
+       class="px-[1.0625rem]
+              md:px-[clamp(1.0625rem,_calc(0.7rem_+_2vw),_2.5rem)] py-6
+              md:py-[clamp(1.5rem,_calc(0.197919rem_+_2vw),_2rem)]">
       <img class="inline" src="./images/logo.svg" role="img" alt="Snap logo"
            width="84" height="27" />
     </a>
-    <button type="button" class="lg:hidden px-[0.9375rem] py-6" id="open-nav-menu">
+    <button type="button" class="md:hidden px-[0.9375rem] py-6" id="open-nav-menu">
       <img src="./images/icon-menu.svg" role="img" alt="Open navigation menu"
            width="32" height="18" />
     </button>
-    <nav class="fixed top-0 right-[-15rem] h-screen w-[15rem] lg:static
-                lg:top-auto lg:right-auto lg:h-auto lg:w-full bg-almost-white
+    <nav class="fixed top-0 right-[-15rem] h-screen w-[15rem] md:static
+                md:top-auto md:right-auto md:h-auto md:w-full bg-almost-white
                 font-epilogue text-medium-gray"
          id="nav-menu">
-      <header class="lg:hidden h-[4.6875rem] flex justify-end">
+      <header class="md:hidden h-[4.6875rem] flex justify-end">
         <button type="button" id="close-nav-menu"
                 class="w-[4.125rem] h-[4.375rem] flex justify-center
                        items-center">
@@ -37,16 +40,16 @@
                alt="Close navigation menu" width="26" height="26" />
         </button>
       </header>
-      <div class="pl-6 pr-5 flex flex-col lg:flex-row lg:justify-between lg:h-full">
+      <div class="pl-6 pr-5 flex flex-col md:flex-row md:justify-between md:h-full">
         <ul aria-description="Informational links"
-            class="text-base/none lg:text-sm/none flex flex-col lg:flex-row
-                   lg:items-center lg:h-full lg:space-x-[2.4375rem]">
-          <li class="mb-[1.625rem] lg:mb-0 lg:group lg:relative">
+            class="text-base/none md:text-md/none flex flex-col md:flex-row
+                   md:items-center md:h-full md:space-x-[2.4375rem]">
+          <li class="mb-[1.625rem] md:mb-0 md:group md:relative">
             <button type="button" id="toggle-features-menu"
                     class="group hover:text-almost-black">
               Features
               <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg"
-                   class="inline ml-[0.9375rem] lg:ml-[0.4375rem]">
+                   class="inline ml-[0.9375rem] md:ml-[0.4375rem]">
                 <path stroke="#686868" stroke-width="1.5" fill="none"
                       d="m1 1 4 4 4-4"
                       class="group-hover:stroke-almost-black"/>
@@ -55,10 +58,10 @@
                       class="hidden group-hover:stroke-almost-black"/>
               </svg>
             </button>
-            <ul class="hidden lg:absolute pl-6 pt-[1.625rem] lg:px-[1.5rem]
-                       lg:pt-[1.4375rem] lg:pb-[1.5rem] lg:rounded-[10px]
-                       lg:shadow-[0_0_50px_hsla(0,0%,8%,0.25)]
-                       space-y-[1.375rem] lg:space-y-4 lg:top-9 lg:right-px"
+            <ul class="hidden md:absolute pl-6 pt-[1.625rem] md:px-[1.5rem]
+                       md:pt-[1.4375rem] md:pb-[1.5rem] md:rounded-[10px]
+                       md:shadow-[0_0_50px_hsla(0,0%,8%,0.25)]
+                       space-y-[1.375rem] md:space-y-4 md:top-9 md:right-px"
                 id="features-menu">
               <li class="flex items-center space-x-[0.9375rem]">
                 <span class="w-4 inline-flex justify-center">
@@ -92,11 +95,11 @@
               </li>
             </ul>
           </li>
-          <li class="mb-[1.625rem] lg:mb-0 relative">
+          <li class="mb-[1.625rem] md:mb-0 relative">
             <button type="button" id="toggle-company-menu" class="group hover:text-almost-black">
               Company
               <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg"
-                   class="inline ml-[0.9375rem] lg:ml-[0.4375rem]">
+                   class="inline ml-[0.9375rem] md:ml-[0.4375rem]">
                 <path stroke="#686868" stroke-width="1.5" fill="none"
                       d="m1 1 4 4 4-4"
                       class="group-hover:stroke-almost-black"/>
@@ -105,10 +108,10 @@
                       class="hidden group-hover:stroke-almost-black"/>
               </svg>
             </button>
-            <ul class="hidden lg:absolute pl-6 pt-[1.625rem] lg:px-[1.5625rem]
-                       lg:py-6 lg:rounded-[10px] lg:top-9 lg:left-0
-                       lg:shadow-[0_0_50px_hsla(0,0%,8%,0.25)]
-                       space-y-[1.375rem] lg:space-y-4"
+            <ul class="hidden md:absolute pl-6 pt-[1.625rem] md:px-[1.5625rem]
+                       md:py-6 md:rounded-[10px] md:top-9 md:left-0
+                       md:shadow-[0_0_50px_hsla(0,0%,8%,0.25)]
+                       space-y-[1.375rem] md:space-y-4"
                 id="company-menu">
               <li class="text-[0.9375rem] hover:text-almost-black"><a href="#">History</a></li>
               <li class="text-[0.9375rem] whitespace-nowrap hover:text-almost-black">
@@ -117,19 +120,19 @@
               <li class="text-[0.9375rem] hover:text-almost-black"><a href="#">Blog</a></li>
             </ul>
           </li>
-          <li class="mb-[1.625rem] lg:mb-0 hover:text-almost-black"><a href="#">Careers</a></li>
-          <li class="mb-[1.625rem] lg:mb-0 hover:text-almost-black"><a href="#">About</a></li>
+          <li class="mb-[1.625rem] md:mb-0 hover:text-almost-black"><a href="#">Careers</a></li>
+          <li class="mb-[1.625rem] md:mb-0 hover:text-almost-black"><a href="#">About</a></li>
         </ul>
-	<div role="presentation" class="flex flex-col lg:flex-row lg:items-center">
+	<div role="presentation" class="flex flex-col md:flex-row md:items-center">
           <a href="#"
-             class="block h-[2.625rem] lg:w-[6.5rem] text-center flex flex-col
-                    justify-center text-sm/none mt-[0.0625rem] hover:text-almost-black">
+             class="block h-[2.625rem] md:w-[6.5rem] text-center flex flex-col
+                    justify-center text-md/none mt-[0.0625rem] hover:text-almost-black">
              Login
           </a>
           <a href="#"
-             class="block h-[2.625rem] lg:w-[6.5rem] text-center flex flex-col
+             class="block h-[2.625rem] md:w-[6.5rem] text-center flex flex-col
 		    justify-center border border-medium-gray hover:border-almost-black rounded-[0.875rem]
-                    text-sm/none hover:text-almost-black">
+                    text-md/none hover:text-almost-black">
              Register
           </a>
 	</div>
@@ -137,56 +140,56 @@
     </nav> 
   </header>
   <main>
-    <header class="flex flex-col lg:flex-row-reverse lg:justify-center lg:gap-[9.1875rem] lg:pt-[2.4375rem] bg-almost-white">
+    <header class="flex flex-col xl:flex-row-reverse xl:justify-center items-center xl:items-start xl:gap-[9.1875rem] xl:pt-[2.4375rem] bg-almost-white">
       <picture class="max-w-[30rem]">
         <source srcset="./images/image-hero-desktop.png"
-                media="(min-width: 1024px)">
+                media="(min-width: 1280px)">
         <img src="./images/image-hero-mobile.png"
              alt="Person doing remote work on laptop"
 	     class="w-[min(100%,_30rem)] h-auto">
       </picture>
-      <div class="flex flex-col items-center lg:items-start py-[3.125rem]
-                  lg:pt-[6.375rem] lg:pb-0 lg:pl-[2.1875rem] font-epilogue">
-        <h1 class="text-center lg:text-left text-almost-black text-[2.1875rem]
-                   lg:text-[5rem]/[5.125rem] font-bold lg:w-[33rem]">
+      <div class="flex flex-col items-center xl:items-start py-[3.125rem]
+                  xl:pt-[6.375rem] xl:pb-0 xl:pl-[2.1875rem] font-epilogue">
+        <h1 class="text-center xl:text-left text-almost-black text-[2.1875rem]
+                   xl:text-[5rem]/[5.125rem] font-bold xl:w-[33rem]">
           Make remote work
 	</h1>
-        <p class="text-center lg:text-left text-medium-gray text-base
-                  lg:text-[1.125rem] font-medium leading-[1.625rem] lg:leading-7 w-[95.2%]
-                  lg:w-auto lg:max-w-[46ch] mt-[1.1875rem] lg:mt-12">
+        <p class="text-center xl:text-left text-medium-gray text-base
+                  xl:text-[1.125rem] font-medium leading-[1.625rem] xl:leading-7 w-[95.2%]
+                  xl:w-auto sm:max-w-[46ch] mt-[1.1875rem] xl:mt-12">
           Get your team in sync, no matter your location. Streamline processes, 
           create team rituals, and watch productivity soar.
         </p>
         <a href="#"
            class="flex justify-center items-center text-almost-white hover:text-almost-black text-base/none
-                  lg:text-[1.125rem] font-bold tracking-[-0.02em]
-                  bg-almost-black hover:bg-almost-white w-[8.5rem] lg:w-[10.1875rem]
-                  h-12 lg:h-14 rounded-2xl mt-6
-                  lg:mt-[3.125rem] hover:border-almost-black hover:border">
+                  xl:text-[1.125rem] font-bold tracking-[-0.02em]
+                  bg-almost-black hover:bg-almost-white w-[8.5rem] xl:w-[10.1875rem]
+                  h-12 xl:h-14 rounded-2xl mt-6
+                  xl:mt-[3.125rem] hover:border-almost-black hover:border">
           Learn more
         </a>
         <ul aria-description="Some of our top clients"
-            class="flex items-center h-[3.75rem] mt-[1.9375rem] lg:mt-[6.0625rem]">
-          <li aria-description="databiz" class="w-[7.0625rem] px-4 lg:px-0">
+            class="flex items-center h-[3.75rem] mt-[1.9375rem] xl:mt-[6.0625rem]">
+          <li aria-description="databiz" class="w-[7.0625rem] px-4 xl:px-0">
             <img src="./images/client-databiz.svg" role="img" alt="Databiz logo"
                  width="114" height="20" class="w-full h-auto" />
           </li>
           <li aria-description="audiophile"
-              class="w-[4.92rem] lg:w-[4.5625rem]
-                     px-[0.8125rem] lg:px-0 lg:ml-[2.5625rem]">
+              class="w-[4.92rem] xl:w-[4.5625rem]
+                     px-[0.8125rem] xl:px-0 xl:ml-[2.5625rem]">
             <img src="./images/client-audiophile.svg" role="img"
                  alt="Audiophile logo" width="73" height="36"
                  class="w-full h-auto" />
           </li>
           <li aria-description="meet"
-              class="w-[6.035rem] lg:w-[5.625rem]
-                     px-[1.0175rem] lg:px-0 lg:ml-[2.5rem]">
+              class="w-[6.035rem] xl:w-[5.625rem]
+                     px-[1.0175rem] xl:px-0 xl:ml-[2.5rem]">
             <img src="./images/client-meet.svg" role="img" alt="Meet logo"
                  width="90" height="20" class="w-full h-auto"/>
           </li>
           <li aria-description="maker"
-              class="w-[5.215rem] lg:w-[5.1875rem]
-                     px-[0.7325rem] lg:px-0 lg:ml-[2.4375rem]">
+              class="w-[5.215rem] xl:w-[5.1875rem]
+                     px-[0.7325rem] xl:px-0 xl:ml-[2.4375rem]">
             <img src="./images/client-maker.svg" role="img" alt="Maker logo"
                  width="83" height="24" class="w-full h-auto"/>
           </li>

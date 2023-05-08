@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./index.html', './src/**/*.js'],
-  theme: {
+  theme: { 
     colors: {
       'almost-white': 'hsl(0, 0%, 98%)',
       'medium-gray': 'hsl(0, 0%, 41%)',
@@ -10,7 +10,11 @@ module.exports = {
     fontFamily: {
       epilogue: ['\'Epilogue\'', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      screens: {
+        md: '800px'
+      },
+    },
   },
   plugins: [],
 }
