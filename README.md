@@ -1,93 +1,82 @@
-# Frontend Mentor - Intro section with dropdown navigation
+# Frontend Mentor - Intro section with dropdown navigation solution
 
-![Design preview for the Intro section with dropdown navigation coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Intro section with dropdown navigation challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+### The challenge
 
-## The challenge
-
-Your challenge is to build out this intro section with dropdown navigation and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the relevant dropdown menus on desktop and mobile when interacting with the navigation links
 - View the optimal layout for the content depending on their device's screen size
 - See hover states for all interactive elements on the page
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+![](./screenshot.png)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### Links
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+- [Solution]()
+- [Live site]()
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+## My process
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+### Built with
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+- [TailwindCSS](https://tailwindcss.com/) - CSS Utility Framework
 
-## Building your project
+### What I learned
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+On this project, I took a different approach than I normally do. I decided to plan out my designs before putting it to code. I had used Figma in the past to test out the application, so I made a new whiteboard and recreated the designs from the given design images. This gave me the confidence to properly position and size my HTML elements (especially the text).
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+I also learned how to create togglable menus. One challenge I faced was that if I resized the browser viewport, the navigation menu that's on top of all elements onscreen moves to the top of the screen into the site header. I learned about the `onresize` event, which fires when the browser viewport changes. Using this event and an `if` statement to check if the viewport width was wider than a specific viewport size, the navigation menu would disappear so that it appears in the site header instead.
 
-## Deploying your project
+In regards to units, I learned from [Google's Web Dev Website](web.dev) that it's important to not use `vw` units on their own. This makes it impossible for the user's preferred font size configured in the browser settings to apply to the text on the web page. Instead, the preferred option is to use `calc(rem + vw)`, which does allow users to resize the web page text. However, this does make it more difficult to calculate size measurements precisely.
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+What I did was calculate the precise `vw` unit to equate to a certain number of pixels wide at a specific viewport width. Then, I took the integer component of the `vw` unit to use as the `vw` unit I would use in practice. The decimal component of the original `vw` unit would then be converted back to `px` using the same viewport width, and then finally converting it to `rem`. There's a lot of unit conversion going on, but it's well worth the effort for both precision and user accessibility.
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+Another thing that I found out on the same website was that `line-height` should use unitless values. This allows the `line-height` to scale appropriately as the `font-size` of the applied text changes. What I would do is determine the desired `line-height` in `px` at the given `font-size`, then calculate the practical `line-height` by dividing the pixel `line-height` value by the `font-size` in pixels, which should result in a unitless value.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+### Continued development
 
-## Create a custom `README.md`
+Starting out, I constructed the design in Figma, which gave me the confidence to give the correct positions and sizes. In the future, I want to keep taking this approach, but I also want to learn other features I didn't touch, such as autolayout, styles, components, and prototyping with transitions.
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+Another thing I want to learn more about is web accessibility. While I tried to use some `aria` attributes here and there, I got lost in the sea of attributes and it became difficult for me to keep up. I think it helps to take the time to learn some commonly used `aria` attributes in isolation. It would also help me to manually test it with a screen reader.
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+Linking external SVG files to my HTML document was also a huge pain. While `<img>` tags are the go-to method, the SVGs can't be re-colored based on pseudo-classes or JS events as an `<img>`. I also tried this:
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+```html
+<svg>
+  <use href="./images/icon-arrow-down.svg"></use>
+</svg>
+```
 
-## Submitting your solution
+However, it never rendered properly. My last ditch solution was to copy and paste the SVG source code throughout my HTML document. It wasn't something I wanted to do, as copy-paste programming can generally be considered problematic if you need to make numerous changes to all copies. I hope I can find a better way to link SVG files while still keeping most of the advantages of SVGs over PNGs and JPGs.
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+### Useful resources
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+- [Google's Web Dev site](https://web.dev/learn/design) - This gave me a few good practices when creating responsive designs 
 
-## Sharing your solution
+## Author
 
-There are multiple places you can share your solution:
+- Frontend Mentor - [@StephenYu2018](https://www.frontendmentor.io/profile/StephenYu2018)
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
