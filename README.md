@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution]()
-- [Live site]()
+- [Solution](https://frontendmentor.io/solutions/intro-section-with-dropdown-navigation-tailwindcss-fluid-layout-QOPleNaFyI)
+- [Live site](https://stephenyu2018.github.io/intro-section-with-dropdown-navigation-main)
 
 ## My process
 
