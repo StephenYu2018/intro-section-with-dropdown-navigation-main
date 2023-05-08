@@ -139,24 +139,27 @@
       </div>
     </nav> 
   </header>
-  <main>
-    <header class="flex flex-col xl:flex-row-reverse xl:justify-center items-center xl:items-start xl:gap-[9.1875rem] xl:pt-[2.4375rem] bg-almost-white">
+  <main class="bg-almost-white">
+    <header class="flex flex-col xl:flex-row-reverse xl:justify-center
+                   items-center xl:items-start xl:gap-[9.1875rem]
+                   xl:pt-[2.4375rem] xl:pb-[6.9885rem] bg-almost-white">
       <picture class="max-w-[30rem]">
         <source srcset="./images/image-hero-desktop.png"
                 media="(min-width: 1280px)">
         <img src="./images/image-hero-mobile.png"
              alt="Person doing remote work on laptop"
-	     class="w-[min(100%,_30rem)] h-auto">
+	     class="max-w-full max-h-auto">
       </picture>
       <div class="flex flex-col items-center xl:items-start py-[3.125rem]
                   xl:pt-[6.375rem] xl:pb-0 xl:pl-[2.1875rem] font-epilogue">
         <h1 class="text-center xl:text-left text-almost-black text-[2.1875rem]
-                   xl:text-[5rem]/[5.125rem] font-bold xl:w-[33rem]">
+                   xl:text-[5rem]/[1.025] font-bold xl:w-[33rem]">
           Make remote work
 	</h1>
         <p class="text-center xl:text-left text-medium-gray text-base
-                  xl:text-[1.125rem] font-medium leading-[1.625rem] xl:leading-7 w-[95.2%]
-                  xl:w-auto sm:max-w-[46ch] mt-[1.1875rem] xl:mt-12">
+                  xl:text-[1.125rem] font-medium leading-relaxed
+                  xl:leading-[1.556] max-w-[38ch] sm:max-w-[46ch]
+                  mt-[1.1875rem] xl:mt-12">
           Get your team in sync, no matter your location. Streamline processes, 
           create team rituals, and watch productivity soar.
         </p>
