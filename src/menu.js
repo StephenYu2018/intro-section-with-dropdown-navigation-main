@@ -5,11 +5,11 @@ const closeNavMenuButton = document.getElementById('close-nav-menu');
 const screenOverlay = document.getElementById('screen-overlay');
 
 const featuresMenu = document.getElementById('features-menu');
-const toggleFeaturesMenuIcon = document.querySelector('#toggle-features-menu > img');
+const toggleFeaturesMenuIcons = document.querySelectorAll('#toggle-features-menu > svg > path');
 const toggleFeaturesMenu = document.getElementById('toggle-features-menu');
 
 const companyMenu = document.getElementById('company-menu');
-const toggleCompanyMenuIcon = document.querySelector('#toggle-company-menu > img');
+const toggleCompanyMenuIcons = document.querySelectorAll('#toggle-company-menu > svg > path');
 const toggleCompanyMenu = document.getElementById('toggle-company-menu');
 
 const offscreenNavbar = 'right-[-15rem]';
@@ -40,16 +40,16 @@ openNavMenuButton.addEventListener('click', () => {
 
 closeNavMenuButton.addEventListener('click', hideNavbar);
 
-toggleFeaturesMenu.addEventListener('click', makeDisplayToggler(featuresMenu, toggleFeaturesMenuIcon));
-toggleCompanyMenu.addEventListener('click', makeDisplayToggler(companyMenu, toggleCompanyMenuIcon));
+toggleFeaturesMenu.addEventListener('click', makeDisplayToggler(featuresMenu, toggleFeaturesMenuIcons));
+toggleCompanyMenu.addEventListener('click', makeDisplayToggler(companyMenu, toggleCompanyMenuIcons));
 
-function makeDisplayToggler(targetElement, togglerIconElement) {
+function makeDisplayToggler(targetElement, togglerIconElements) {
   return () => {
-    if (togglerIconElement.getAttribute('src') === './images/icon-arrow-down.svg') {
-      togglerIconElement.setAttribute('src', './images/icon-arrow-up.svg');
-    } else {
-      togglerIconElement.setAttribute('src', './images/icon-arrow-down.svg');
-    }
+    const DOWN_ARROW = 0;
+    const UP_ARROW = 1;
+
+    togglerIconElements[DOWN_ARROW].classList.toggle(noDisplay);
+    togglerIconElements[UP_ARROW].classList.toggle(noDisplay);
 
     targetElement.classList.toggle(noDisplay);
   };
